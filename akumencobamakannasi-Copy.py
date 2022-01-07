@@ -54,6 +54,7 @@ def Pilihansewagame():
     print(pilihansewa7[1])
     print(pilihansewa8[1])
     print(pilihansewa9[1])
+    print("")
     while menu == 1:
         
         userpilihgamesewaan = int(input("Game apa yang ingin disewa: "))    #berfungsi untuk menanyakan user "game mana yang ingin disewa"
