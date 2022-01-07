@@ -20,6 +20,7 @@ def Menu():
     print("[1] Sewa\n" + "[2] Beli\n" + "[3] Exit\n")
     while True:
         menu = int(input("Pilih: "))
+        print("")
 
         if menu == 1: 
             return 1        #jika user milik angka 1, maka kode akan mengembalikan angka 1 tersebut, berlaku sama untuk baris dibawahnya
@@ -56,9 +57,9 @@ def Pilihansewagame():
     print(pilihansewa9[1])
     print("")
     while menu == 1:
-        
         userpilihgamesewaan = int(input("Game apa yang ingin disewa: "))    #berfungsi untuk menanyakan user "game mana yang ingin disewa"
         berapalamasewa = int(input("Berapa lama anda menyewa (Hari): "))    #menanyakan user berapa hari mereka akan menyewa"
+        print("")
         total_biaya_sewa = 10000 * berapalamasewa
         
         if userpilihgamesewaan == 1:    
@@ -90,7 +91,6 @@ def Pilihansewagame():
             break
         else:
             print("Pilihan salah!")
-        
         
 def Pilihanbeligame():
 
@@ -124,54 +124,63 @@ def Pilihanbeligame():
         #misalnya user memilih game pertama, maka yang terjadi adalah kode bertanya ke user terkait jumlah barang yang mereka beli, lalu variabel 'pilihan1' akan dikali dengan jumlah barang dan menghasilnya 'total_biaya'
         if pilihan_game == "1":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan1 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "American Truck Simulator"   #berfungsi jika user ingin melihat keranjang, maka akan ditampilkan (jumlahbarang)x American Truck Simulator = ('total_biaya')
             break
         elif pilihan_game == "2":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan2 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Arma: Cold War Assault"
             break
         elif pilihan_game == "3":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan3 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Bioshock Trilogy"
             break
         elif pilihan_game == "4":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan4 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "DOOM 64"
             break
         elif pilihan_game == "5":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan5 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Euro Truck Simulator"
             break
         elif pilihan_game == "6":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan6 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Far Cry Series"
             break
         elif pilihan_game == "7":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan7 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "L.A. Noir"
             break
         elif pilihan_game == "8":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan8 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Life is Strange Series (Life is Strange 1 Complete Episode, Life is Strange 2 Complete Episode, Life is Strange True Colors)"
             break
         elif pilihan_game == "9":
             jumlah_barang = int(input("Berapa banyak jumlah yang diinginkan: "))
+            print("")
             total_biaya = 0
             total_biaya = pilihan9 * jumlah_barang
             pilihan_game = str(jumlah_barang) + "x " + "Ori Complete Bundle(Ori and the Blind Forest, Ori and the Blind Forest: Definitive Series, Ori and the Will of the Wisps)"
@@ -180,17 +189,15 @@ def Pilihanbeligame():
             print ("Pilihan salah!")
 
 def Pilihanlanjutansewa():
-    global inputusersewa
     #digunakan setelah user memilih game sewaan
     
-    
     while True:
-        print("[1] Lanjut checkout")
+        print("[1] Lanjut Checkout")
         print("[2] Lihat Keranjang\n")
         inputusersewa = int(input("Masukan pilihan: "))
-        if inputusersewa == 1:
-            return 1
-        elif inputusersewa == 2:
+        if inputusersewa == 1:      #halaman Lanjut Checkout
+            return 1 
+        elif inputusersewa == 2:    #halaman Lihat Keranjang
             print(str(userpilihgamesewaan) + " x" + str(berapalamasewa) + " hari" + " = " + str(total_biaya_sewa))
             print("")
             continue
@@ -199,12 +206,10 @@ def Pilihanlanjutansewa():
             continue
 
 def Pilihanlanjutanbeli():
-    global inputuserbeli
-    
     #digunakan setelah user memilih game
     
     while True:
-        print("[1] Lanjut checkout")
+        print("[1] Lanjut Checkout")
         print("[2] Lihat Keranjang\n")
         inputuserbeli = int(input("Masukan pilihan: "))
         if inputuserbeli == 1:
