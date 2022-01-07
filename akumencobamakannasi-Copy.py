@@ -1,4 +1,5 @@
 import os
+import datetime
 
 #Program ini dibuat untuk mempermudah pembelian atau penyewaan game di toko Akong
 
@@ -222,6 +223,22 @@ def Pilihanlanjutanbeli():
             print("Coba cek masukan anda!")
             continue
 
+def struk():
+    print("Selamat datang di Toko Game Akong").center(50)
+    print("-" * 50)
+    timectl = datetime.datetime.now().center(50)
+    print("")
+    if menu == 1:
+        print(str(userpilihgamesewaan) + " x" + str(berapalamasewa) + " hari" + " = " + str(total_biaya_sewa))
+        print("")
+        print("")
+        print("")
+        print("")
+        print("Total" + " = " + str(total_biaya_sewa))
+    elif menu == 2:
+        print(str(pilihan_game) + " = " + str(total_biaya))
+    
+    
 def MembersihkanLayar():
     print("")
     input("Tekan enter untuk melanjutkan...")
