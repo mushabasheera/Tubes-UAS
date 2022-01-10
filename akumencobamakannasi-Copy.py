@@ -8,8 +8,12 @@ def ShowInstruction():
     """Menampilkan instruksi dan welcoming message di menu utama"""
 
     welcome = ("Selamat datang di Toko Game Akong").center(127)
+    time = str(datetime.datetime.now()).center(126)
+    print("=" * 127)
     print(welcome)
     print("-" * 127)
+    print(time)
+    print("=" * 127)
     instruction = "Pilih menu dibawah"
     print(instruction)
 
@@ -46,7 +50,7 @@ def Pilihansewagame():
     pilihansewa7 = [7, "[7] L.A. Noir", "L.A. Noir"]
     pilihansewa8 = [8, "[8] Life is Strange Series (Life is Strange 1 Complete Episode, Life is Strange 2 Complete Episode, Life is Strange True Colors)", "Life is Strange Series (Life is Strange 1 Complete Episode, Life is Strange 2 Complete Episode, Life is Strange True Colors)"]
     pilihansewa9 = [9, "[9] Ori Complete Bundle(Ori and the Blind Forest, Ori and the Blind Forest: Definitive Series, Ori and the Will of the Wisps)", "Ori Complete Bundle(Ori and the Blind Forest, Ori and the Blind Forest: Definitive Series, Ori and the Will of the Wisps)"]
-    print("Untuk menyewa anda akan dikenakan biasa Rp. 10.000/hari untuk setiap game\n")
+    print("Untuk menyewa anda akan dikenakan biaya Rp. 10.000/hari untuk setiap game\n")
     print(pilihansewa1[1])
     print(pilihansewa2[1])
     print(pilihansewa3[1])
@@ -223,20 +227,28 @@ def Pilihanlanjutanbeli():
             print("Coba cek masukan anda!")
             continue
 
-def struk():
-    print("Selamat datang di Toko Game Akong").center(50)
-    print("-" * 50)
-    timectl = datetime.datetime.now().center(50)
-    print("")
-    if menu == 1:
-        print(str(userpilihgamesewaan) + " x" + str(berapalamasewa) + " hari" + " = " + str(total_biaya_sewa))
-        print("")
-        print("")
-        print("")
-        print("")
-        print("Total" + " = " + str(total_biaya_sewa))
-    elif menu == 2:
-        print(str(pilihan_game) + " = " + str(total_biaya))
+# def struk():
+##     kode tidak selesai, karena kurangnya opsi pada python
+#     welcome_struk = "Selamat datang di Toko Game Akong".center(50)
+#     totallistgame = str(total_biaya_sewa)
+#     align_totallistgame = "{:>100}".format(totallistgame)
+#     totalyangdikeluarkan = str(total_biaya_sewa)
+#     align_totalyangdikeluarkan = "{:>100}".format(totalyangdikeluarkan)
+#     print(welcome_struk)
+#     print("-" * 50)
+#     timectl = str(datetime.datetime.now()).center(48)
+#     print(timectl)
+#     print("")
+#     if menu == 1:
+#         print(str(userpilihgamesewaan) + " x" + str(berapalamasewa) + " hari" + " = " + align_totallistgame)
+#         print("")
+#         print("")
+#         print("")
+#         print("")
+#         print("Total" + " = " + align_totalyangdikeluarkan)
+#         #print(totalyangdikeluarkan)
+#     elif menu == 2:
+#         print(str(pilihan_game) + " = " + str(total_biaya))
     
     
 def MembersihkanLayar():
@@ -252,6 +264,8 @@ while True:
         if Pilihanlanjutansewa() == 1:
             print("Total biaya sebesar: " + str(total_biaya_sewa))
             print("Terimakasih sudah berbelanja di toko kami!")
+            # print("")
+            # struk()
         MembersihkanLayar()
         continue
     elif menu == 2:
